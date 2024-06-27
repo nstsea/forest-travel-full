@@ -1,0 +1,25 @@
+.main-header {
+  color: #31405B;
+  font-size: 54px;
+  font-weight: 700;
+  /* Tablet */
+  @media (max-width: 1199px) {
+    font-size: 50px;
+    line-height: 1;
+  }
+  /* Mobile */
+  @media (max-width: 899px) {
+    font-size: 42px;
+  }
+  /* Mobile XS */
+  @media (max-width: 599px) {
+    font-size: 34px;
+  }
+}
+
+.main-header--resize {
+  /* Mobile XS */
+  @media (max-width: 599px) {
+    font-size: 28px;
+  }
+}

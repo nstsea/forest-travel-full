@@ -1,0 +1,31 @@
+.logo {
+  font-family: 'Lobster', sans-serif; 
+  font-size: 40px;
+  /* Mobile */
+  @media (max-width: 899px) {
+    font-size: 30px;
+  }
+}
+
+.footer-logo {
+  margin-bottom: 26px;
+  /* Tablet */
+  @media (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  /* Mobile XS */
+  @media (max-width: 599px) {
+    margin-bottom: 10px;
+  }
+}
+
+.footer-logo .logo {
+  /* Tablet */
+  @media (max-width: 1199px) {
+    font-size: 30px;
+  }
+  /* Mobile XS */
+  @media (max-width: 599px) {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,76 @@
+.chekbox-row-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  /* Mobile XS */
+  @media (max-width: 599px) {
+    row-gap: 20px;
+  }
+}
+
+.real-chekbox {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.custom-chekbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  border-radius: 2px;
+  border: 1px solid #C0C0C0;
+  background-color: #EEE;
+
+  margin-right: 10px;
+  vertical-align: top;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+
+    width: 17px;
+    height: 17px;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .3s ease-in;
+
+    background-image: url('./../img/icons/check.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    vertical-align: middle;
+
+  }
+}
+
+
+.real-chekbox:checked + .custom-chekbox::before {
+display: block; 
+transform: translate(-50%, -50%) scale(1);
+}
+
+.real-chekbox:focus + .custom-chekbox {
+  box-shadow: 0 0  0px 2px #333;
+}
+
+.custom-checkbox-wrapper {
+  display: flex;
+}
+
+.custom-chekbox-text {
+  display: inline-block;
+  /* Mobile XS */
+  @media (max-width: 599px) {
+    width: 220px;
+  }
+}
